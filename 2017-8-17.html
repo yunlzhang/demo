@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>继承 demo</title>
+</head>
+<body>
+    <script>
+
+        /*function Animal(){
+            this.spieces = 'animal';
+        }
+        function Cat(){
+            this.name = 'cat';
+        }
+        Cat.prototype = new Animal();
+        Cat.constructor = Cat;
+        var cat1 = new Cat();
+        console.log(cat1)*/
+
+        function Animal(){
+            this.spieces = 'animal';
+        }
+        function Cat(){
+            this.name = 'cat';
+        }
+        Cat.prototype = new Animal();
+        Cat.prototype.constructor = Cat;
+        var cat1 = new Cat();
+        console.log(cat1)
+
+
+
+        // //原型风格的继承
+        // function Foo(name){
+        //     this.name = name;
+        // }
+        // Foo.prototype.myName = function(){
+        //     return this.name;
+        // }
+        // function Bar(name,label){
+        //     Foo.call(this,name);
+        //     this.label = label;
+        // }
+        // Bar.prototype = Object.create(Foo.prototype);
+        // console.log(Object.create(Foo.prototype))
+        // Bar.prototype.myLabel = function(){
+        //     return this.label;
+        // }
+        //
+        // var a = new Bar('a','obj a');
+        // console.log(a)
+        // console.log(a.myName())
+        // console.log(a.myLabel());
+        // if(!Object.create){
+        //     Object.create = function(o){
+        //         function F(){};
+        //         F.prototype = o;
+        //         return new F();
+        //     }
+        // }
+    </script>
+
+    <a href="https://www.baidu.com" class="bd">百度</a>
+
+    <script>
+
+        document.querySelector('.bd').onclick = function(e){
+            return false;
+            console.log(e)
+        }
+    </script>
+</body>
+</html>
