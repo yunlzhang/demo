@@ -27,9 +27,10 @@
     }
 
     function loadImg(el) {
-        if (!el.dataset.load) {
+        var load = el.dataset.load ? el.dataset.load : el.getAttribute('data-load')
+        if (!load) {
             el.src = el.dataset.src;
-            el.dataset.load = 1;
+            el.setAttribute('data-load',1);
         }
     }
 
