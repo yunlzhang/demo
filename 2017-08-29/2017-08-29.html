@@ -72,9 +72,9 @@
             var ret = [];
             var len = arr.length;
             var temp = {};
-            var tempkey = '';
+            var tempKey = '';
             for(var i = 0;i<len;i++){
-                tempkey = typeof arr[i] + JSON.stringify(arr[i]);
+                tempKey = typeof arr[i] + JSON.stringify(arr[i]);
                 if(!temp[tempKey]){
                     temp[tempKey] = 1;
                     ret.push(arr[i]);
