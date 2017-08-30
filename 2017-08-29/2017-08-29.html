@@ -42,7 +42,7 @@
                 isRepeat = false;
                 for(var j = i+1;j<len;j++){
                     if(arr[i] === arr[j]){
-                        isReapeat = true;
+                        isRepeat = true;
                         break;
                     }
                 }
@@ -74,7 +74,7 @@
             var temp = {};
             var tempkey = '';
             for(var i = 0;i<len;i++){
-                tempkey = typeof arr[i] + JSON.stringfy(arr[i]);
+                tempkey = typeof arr[i] + JSON.stringify(arr[i]);
                 if(!temp[tempKey]){
                     temp[tempKey] = 1;
                     ret.push(arr[i]);
